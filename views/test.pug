@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        meta(charset="utf8")
+        title TEST
+        link(rel='stylesheet', href='./css/style.css')
+        link(href="https://fonts.googleapis.com/css?family=Didact+Gothic", rel="stylesheet")
+    body
+        h1.myStyle#myId Книжный архив
+        form(method="post" class="addForm")
+            div.titleBlock
+                label
+                    span Название
+                    input(type="text" name="title" maxlength="100" required)
+                label
+                    span Автор
+                    input(type="text" name="author" maxlength="20" required)
+            label(class="textArea")
+                span Краткое описние
+                textarea(name="description" maxlength="200" required)
+            div.imgBlock
+                label
+                    span Год издания
+                    input(type="number" name="date" min="1901" max="2020" required)
+                label
+                    span Изображение
+                    input(type="text" name="image" value="default" readonly)
+            input(type="submit" value="Загрузить" class="send")
+        form
+            table
+                thead
+                    tr
+                        th(data-type="integer") id
+                        th(data-type="text") Название
+                        th(data-type="text") Автор
+                        th(data-type="text") Описание
+                        th(data-type="integer") Дата
+                        th Картинка
+                tbody
+                    each obj in books
+                            tr
+                                td= obj.id
+                                td(name="newTitle" itemID=obj.id)= obj.title
+                                td(name="newAuthor" itemID=obj.id)= obj.author
+                                td(name="newDescription" itemID=obj.id)= obj.description
+                                td(name="newDate" itemID=obj.id)= obj.date
+                                td
+                                    - var source = "img/"+obj.image+".jpg"
+                                    img(src=source class="bookCover")
+        case max
+            when 0: p Нет доступных книг
+            when 1: p Доступна #{max} книга
+            when 2: p Доступно #{max} книги
+            when 3: p Доступно #{max} книги
+            when 4: p Доступно #{max} книги
+            default: p Доступно #{max} книг
+        form(method="post")
+            input(type="text" name="count" id="count" placeholder=count)
+            input(type="submit" value="Получить" class="send")
+    script
+        include main.js
+
+
+
+

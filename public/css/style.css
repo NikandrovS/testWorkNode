@@ -1,0 +1,155 @@
+body {
+    background-color: #9b85ec;
+    color: #241f25;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Didact Gothic', sans-serif;
+}
+ul {
+    list-style-type: none;
+}
+table {
+    border: 1px solid rebeccapurple;
+    width: 1000px;
+    text-align: center;
+    border-spacing: 0;
+}
+th {
+    padding: 2px 7px;
+    height: 35px;
+    background-color: #8670d7;
+    border-bottom: 1px solid rebeccapurple;
+    border-right: 1px solid rebeccapurple;
+}
+th:nth-child(3){
+    width: 130px;
+}
+th:last-child {
+    border-right: none;
+}
+tr:nth-child(2n-1) {
+    background-color: #a48df6;
+}
+tr:nth-child(2n) {
+    background-color: #917be1;
+}
+.bookCover {
+    height: 100px;
+    margin-top: 4px;
+}
+/*Стилизация формы добавления книг*/
+.addForm {
+    background-color: #8670d7;
+    padding: 15px;
+    width: 968px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid rebeccapurple;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 10px;
+}
+span {
+    font-weight: bold;
+    font-size: 17px;
+}
+label {
+    width: 200px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+label span {
+    margin-bottom: 5px;
+}
+.titleBlock, .textArea, .imgBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input, textarea {
+    padding: 10px;
+    outline: none;
+    font-family: 'Didact Gothic', sans-serif;
+    border: 1px solid rebeccapurple;
+    background-color: #baadff;
+}
+.error {
+    outline: 5px solid crimson;
+}
+.textArea {
+    width: 350px;
+}
+.imgBlock label {
+    width: 100px;
+}
+.imgBlock input {
+    width: 61px;
+}
+textarea {
+    width: 350px;
+    height: 75px;
+    resize: none;
+}
+.send {
+    border-radius: 5px;
+    background-color: #baadff;
+    border: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    font-size: 17px;
+}
+.send:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.send:active{
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+
+}
+/*Стилизация формы добавления изменений*/
+input[name="newTitle"] {
+    width: 130px;
+}
+input[name="newAuthor"] {
+    width: 101px;
+}
+input[name="newDate"] {
+    width: 50px;
+}
+th[data-type="integer"] {
+    width: 100px;
+}
+th:first-child {
+    width: 30px;
+}
+th:nth-child(2) {
+    width: 160px;
+}
+.button {
+    width: 40px;
+    margin-top: 2px;
+    margin-right: 2px;
+    border-radius: 5px;
+    background-color: #baadff;
+    border: none;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+.button:hover {
+    background-color: #afa2f4;
+}
+.description {
+    height: 50px;
+    width: 390px;
+    padding: 2px 8px;
+}
+.temporary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+#count {
+    margin-right: 10px;
+}
+
+
